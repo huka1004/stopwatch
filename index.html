@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스탑워치</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        font-family: 'Pretendard', sans-serif;
+        background-image: url('manggom_background.jpg');
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .container {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0);
+            padding: 20px;
+            border-radius: 10px;
+            position: relative;
+            height: 80vh;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: top;
+        }
+        #stopwatch {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        button {
+            font-size: 18px;
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+            border: none;
+            background-color: transparent;
+        }
+        #startStopBtn {
+            order: 2;
+            margin-left: 20px;
+        }
+        #resetBtn {
+            order: 3;
+            margin-left: -20px;
+        }
+        .stopwatch {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="stopwatch">00:00:00</div>
+        <button id="startStopBtn">시작</button>
+        <button id="resetBtn">리셋</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
