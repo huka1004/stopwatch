@@ -1,0 +1,59 @@
+/* 전체 body 스타일링 */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Pretendard', sans-serif;
+    background-image: url('manggom_background.jpg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* 타이머 컨테이너 스타일링 */
+.timer-container {
+    text-align: center;
+    position: relative;
+}
+
+/* 스탑워치 위치 조정 */
+.stopwatch {
+    position: absolute;
+    top: 10px; /* 상단으로부터 10px 위치 */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* 시간 디스플레이 스타일링 */
+#stopwatch {
+    font-size: 3vw;
+    margin-bottom: 10px; /* 시간과 리셋 버튼 사이의 간격 */
+}
+
+/* 버튼 컨테이너 스타일링 */
+.button-container {
+    display: flex;
+    justify-content: flex-end; /* 시간과 리셋 버튼을 오른쪽으로 정렬 */
+}
+
+/* 버튼 스타일링 */
+button {
+    font-size: 1.5vw;
+    padding: 10px 20px;
+    margin-left: 10px; /* 버튼 사이의 간격 설정 */
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+}
+
+/* 미디어 쿼리를 사용하여 작은 화면에서 폰트 크기를 조정 */
+@media (max-width: 768px) {
+    #stopwatch {
+        font-size: 5vw;
+    }
+    button {
+        font-size: 3vw;
+    }
+}
